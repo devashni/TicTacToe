@@ -42,7 +42,7 @@ def get_player_move(player_name,matrix):
         if moves_rows_and_columns_lst == [-1,-1]:
             return moves_rows_and_columns_lst
         elif not is_within_bounds(moves_rows_and_columns_lst, matrix):
-            print ("This input is invalid.")
+            print ("This input is invalid. Please enter valid values for row/col.")
             continue
         elif matrix[int(moves[0])][int(moves[1])] != " ":
             print ("These coordinates are taken. Enter a valid input.")
@@ -92,7 +92,6 @@ def check_diagonal_top_left_to_bottom_right_for_win(matrix, mark_type):
 # Tricky one: Checking matrix diagonal (top-right to bottom-left) for win based on mark type "x" or "o"
 def check_diagonal_top_right_to_bottom_left_for_win(matrix, mark_type):
     col_num = len(matrix)-1
-    print_board(matrix)
     for i in range (0, len(matrix)):
         # top-right to bottom-left 4X4 matrix diagonal cell pattern: 
         # Identifying pattern: [0,3],[1,2],[2,1],[3,0] == [0,len-1],[0+1,len-1-1],[0+1+1,len-1-1-1],[0+1+1+1,len-1-1-1-1]
