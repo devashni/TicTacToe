@@ -104,7 +104,6 @@ def check_diagonal_top_right_to_bottom_left_for_win(matrix, mark_type):
 
 # Checking the FULL Tic-Tac-Toe matrix board for win
 def check_board_for_win(matrix, mark_type):
-    print("1")
     # Check Rows for win
     for single_row in matrix:
         #check_row_for_win function below checks a single row at a time, hence loop above
